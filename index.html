@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearToRetire - FERS Retirement Calculator</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f7;
+        }
+        .header {
+            background: linear-gradient(135deg, #33c78a 0%, #1a6b4a 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 3em;
+            margin: 0;
+            font-weight: 700;
+        }
+        .header p {
+            font-size: 1.3em;
+            margin: 15px 0 0 0;
+            opacity: 0.95;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #1d1d1f;
+            font-size: 2em;
+            margin-top: 0;
+            border-bottom: 3px solid #33c78a;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #424245;
+            font-size: 1.4em;
+            margin-top: 30px;
+        }
+        ul, ol {
+            padding-left: 25px;
+        }
+        li {
+            margin: 10px 0;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .feature-box {
+            background: #f5f5f7;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .feature-box h4 {
+            color: #1a6b4a;
+            font-size: 1.2em;
+            margin-top: 0;
+        }
+        .disclaimer-box {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .disclaimer-box h3 {
+            color: #856404;
+            margin-top: 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            margin-top: 40px;
+            border-top: 1px solid #e5e5e7;
+        }
+        .footer a {
+            color: #33c78a;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .faq-item {
+            margin: 25px 0;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: #1a6b4a;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        @media (max-width: 600px) {
+            .header h1 { font-size: 2em; }
+            .header p { font-size: 1.1em; }
+            h2 { font-size: 1.6em; }
+            .feature-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ClearToRetire</h1>
+        <p>FERS Retirement Calculator for Federal Employees</p>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2>About ClearToRetire</h2>
+            <p>ClearToRetire helps federal employees plan their retirement with confidence. Calculate your FERS pension, TSP withdrawals, Social Security benefits, and net take-home income &mdash; all in one place.</p>
+            <p>Built specifically for FERS employees, including special provision categories: Air Traffic Controllers (ATC), Law Enforcement Officers (LEO), Firefighters (FF), and Customs & Border Protection Officers (CBPO).</p>
+
+            <div class="feature-grid">
+                <div class="feature-box">
+                    <h4>FERS Pension</h4>
+                    <p>Full pension calculation with High-3, COLA, age reductions, and special provision formulas</p>
+                </div>
+                <div class="feature-box">
+                    <h4>TSP Projections</h4>
+                    <p>Traditional &amp; Roth TSP growth, withdrawal timing, and depletion analysis</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Social Security</h4>
+                    <p>Compare claiming at 62, 67, or 70 with cumulative lifetime analysis</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Take-Home Income</h4>
+                    <p>Net monthly income after federal &amp; state taxes, FEHB, Medicare, and survivor benefit</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Scenario Comparison</h4>
+                    <p>Compare retirement years side-by-side to find your optimal date</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Year-by-Year Timeline</h4>
+                    <p>See your income, benefits, and account balances from retirement through life expectancy</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>FERS Eligibility Check</strong> &mdash; Automatically determines your retirement path (Immediate, Early, MRA+10, Deferred) and COLA eligibility</li>
+                <li><strong>Special Provision Support</strong> &mdash; ATC, LEO, FF, CBPO with 1.7% multiplier, SPLIT and MRA+30 formulas</li>
+                <li><strong>FERS Supplement</strong> &mdash; Calculates the Special Retirement Supplement for eligible employees</li>
+                <li><strong>Detailed Tax Breakdown</strong> &mdash; Federal tax brackets plus state-specific rules (pension exemptions, SS taxation)</li>
+                <li><strong>Health Cost Projections</strong> &mdash; FEHB premiums, Medicare Part B/D, and Medigap with annual growth</li>
+                <li><strong>Survivor Benefit Analysis</strong> &mdash; Full, partial, or no survivor election with cost impact</li>
+                <li><strong>Investment Accounts</strong> &mdash; Non-TSP investment tracking with tax treatment and withdrawal planning</li>
+                <li><strong>Other Income Sources</strong> &mdash; Rental income, part-time work, military pension, and more</li>
+                <li><strong>What-If Slider</strong> &mdash; Instantly see how changing your retirement year affects everything</li>
+                <li><strong>Income Target Tracking</strong> &mdash; Set a monthly income goal and see when you'll reach it</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Disclaimer</h2>
+            <div class="disclaimer-box">
+                <h3>Important Notice</h3>
+                <p><strong>ClearToRetire provides estimates for informational and planning purposes only.</strong></p>
+            </div>
+            <ul>
+                <li><strong>Not Financial Advice:</strong> This app is not a substitute for professional financial, tax, or legal advice. Consult a qualified financial advisor before making retirement decisions.</li>
+                <li><strong>Estimates Only:</strong> Calculations are based on current federal regulations and the information you enter. Actual retirement benefits are determined by OPM, SSA, and other federal agencies.</li>
+                <li><strong>Verify With Official Sources:</strong> Always verify your retirement estimates with your HR office, OPM, SSA.gov, and the TSP. Regulations, tax brackets, and benefit amounts change over time.</li>
+                <li><strong>No Warranty:</strong> This app is provided "as is" without warranty of any kind. The developer is not liable for any decisions made based on information from this app.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: Who is ClearToRetire for?</div>
+                <p><strong>A:</strong> ClearToRetire is designed for all FERS (Federal Employees Retirement System) employees, including regular FERS and special provision categories (ATC, LEO, FF, CBPO). It is not designed for CSRS employees.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: Does ClearToRetire collect my data?</div>
+                <p><strong>A:</strong> No. ClearToRetire processes everything locally on your device. No personal information, financial data, or retirement details are ever transmitted to any server. See our <a href="privacy-policy.html">Privacy Policy</a> for complete details.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: How accurate are the calculations?</div>
+                <p><strong>A:</strong> ClearToRetire uses the same formulas and constants published by OPM, SSA, and IRS. However, actual benefits are subject to official determination by federal agencies. Use this app for planning purposes and verify critical numbers with your HR office.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: What tax calculations are included?</div>
+                <p><strong>A:</strong> The app calculates federal income tax using current brackets and includes state-specific rules. Many states exempt federal pensions and/or Social Security from state income tax. The app accounts for these exemptions based on your state of residence.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: Can I compare different retirement dates?</div>
+                <p><strong>A:</strong> Yes. The Compare tab lets you view two retirement years side-by-side, showing differences in pension, TSP balance, Social Security, net income, and more. The Dashboard also has a what-if slider to instantly adjust your retirement year.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: What is the FERS Supplement?</div>
+                <p><strong>A:</strong> The Special Retirement Supplement (SRS) is a bridge payment for eligible FERS employees who retire before age 62. It approximates Social Security benefits based on your federal service and stops at age 62. ClearToRetire calculates this automatically based on your eligibility.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: What iOS version do I need?</div>
+                <p><strong>A:</strong> ClearToRetire requires iOS 17.0 or later.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Contact &amp; Support</h2>
+            <p>Need help or have feedback?</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:hd172@me.com">hd172@me.com</a></li>
+            </ul>
+            <p>We typically respond within 24-48 hours.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>
+            <a href="index.html">Home</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </p>
+        <p style="color: #86868b; margin-top: 20px;">
+            &copy; 2026 ClearToRetire. All rights reserved.<br>
+            For informational purposes only. Not financial, tax, or legal advice.
+        </p>
+    </div>
+</body>
+</html>
